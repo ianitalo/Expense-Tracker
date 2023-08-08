@@ -39,7 +39,7 @@ namespace Expense_Tracker.Controllers
             return View(category);
         }
 
-        // GET: Category/Create
+        // GET: Category/AddOrEdit
         public IActionResult AddOrEdit(int id = 0)
         {
             if(id == 0)
@@ -47,7 +47,7 @@ namespace Expense_Tracker.Controllers
             return View(_context.Categories.Find(id));
         }
 
-        // POST: Category/Create
+        // POST: Category/AddOrEdit
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -56,7 +56,10 @@ namespace Expense_Tracker.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(category);
+                if(category.CategoryId == 0)
+                    _context.Add(category);
+                else
+                    _context.Update(category);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
