@@ -6,11 +6,12 @@
 
 <div class="row">
     <div class="col-md-7">
-        <ejs-grid id="categories" dataSource="@Model" gridLines="None">
+        <ejs-grid id="categories" dataSource="@Model" gridLines="None" allowSorting allowPaging>
+            <e-grid-pagesettings pagesize="5"></e-grid-pagesettings>
             <e-grid-columns>
                 <e-grid-column headerText="Category" field="TitleWithIcon"></e-grid-column>
-                <e-grid-column headerText="Type" template="#typeColumnTemplate"></e-grid-column>
-                <e-grid-column headerText="Actions"></e-grid-column>
+                <e-grid-column headerText="Type" template="#typeColumnTemplate" width="150px"></e-grid-column>
+                <e-grid-column headerText="Actions" width="100px"></e-grid-column>
             </e-grid-columns>
         </ejs-grid>
     </div>
