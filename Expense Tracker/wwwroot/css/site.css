@@ -15,13 +15,15 @@ html {
 }
 
 *:not(.fa-solid):not(.fa):not(.e-icons) {
-    font-family: "Inter";
+    font-family: "Inter"
 }
 
 body {
     margin-bottom: 60px;
     background-color: #12161d;
     color: #fff;
+    overflow: hidden;
+    height:100%;
 }
 
 .e-bigger {
@@ -30,7 +32,10 @@ body {
 
 .main-content {
     margin-left: 290px;
+    overflow-y: auto;
+    height: 100vh;
 }
+
 
 /*BreadCrumb*/
 .e-breadcrumb a, .e-breadcrumb a:hover {
@@ -122,6 +127,18 @@ body {
     border-bottom-right-radius: 5px;
 }
 
+/*Logo*/
+.logo-wrapper {
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.app-logo {
+    padding: 10px 10px;
+}
+
 /*Menu*/
 #menu {
     width: 100% !important;
@@ -168,6 +185,7 @@ body {
         }
 
 
+
 /*Navbar*/
 nav.navbar {
     background-color: rgba(18, 22, 29);
@@ -212,9 +230,7 @@ img.profile-pic {
         line-height: 1;
     }
 
-
-/*Radio button Group*/
-
+/*Radio Button Group*/
 .e-btn-group.custom-rbt-group {
     width: 100%;
 }
@@ -226,7 +242,7 @@ img.profile-pic {
 .custom-rbt-group label.e-btn {
     box-shadow: none !important;
     border: 1px solid #fff;
-    background-color: rgb(34,43,51);
+    background-color: rgb(34 43 51);
     color: #fff;
 }
 
@@ -302,36 +318,35 @@ img.profile-pic {
     content: '\f101'
 }
 
-
 /*Widget*/
 .widget {
     border-radius: 1rem;
     background-color: #1a222b;
 }
 
-.widget.summary > div:first-child {
-    background-color: #222b33;
-    padding: 1rem;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-}
+    .widget.summary > div:first-child {
+        background-color: #222b33;
+        padding: 1rem;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
 
-.widget.summary > div:first-child i {
-    font-weight: bold;
-}
+        .widget.summary > div:first-child i {
+            font-weight: bold;
+        }
 
-.widget.income > div:first-child {
-    color: #65da41;
-}
+    .widget.income > div:first-child {
+        color: #65da41;
+    }
 
-.widget.expense > div:first-child {
-    color: #ff4e48;
-}
+    .widget.expense > div:first-child {
+        color: #ff4e48;
+    }
 
-.widget.balance > div:first-child {
-    color: #2aa1ff;
-}
+    .widget.balance > div:first-child {
+        color: #2aa1ff;
+    }
 
-.widget.chart {
-    padding: 5px;
-}
+    .widget.chart {
+        padding: 5px;
+    }
